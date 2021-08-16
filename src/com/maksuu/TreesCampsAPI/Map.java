@@ -14,17 +14,13 @@ public class Map {
     public Map(int width, int height) {
         if(setMapSize(width, height))
             map = new int[this.width][this.height];
-        for(int i = 0; i < width; i++) {
-            for(int j = 0; j < height; j++) {
-                map[i][j] = 0;
-            }
-        }
     }
 
     private boolean setMapSize(int width, int height) {
         if(width > 0 && height > 0) {
             this.width = width;
             this.height = height;
+            return true;
         }
         return false;
     }
